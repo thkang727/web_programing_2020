@@ -1,0 +1,62 @@
+<!-- Webprogramming html+css+php
+    201724404 강태환
+    2020.11.29.             -->
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>hw5_html</title>
+
+    <style>
+        div.inpform {
+            width: 300px;
+            height: 600px;
+            padding: 10px;
+            border: 0px solid black;
+        }
+        
+        div.inimg {
+            width: 50px;
+            height: 50px;
+            float: right;
+            margin-right: 10px;
+        }
+        
+        img {
+            float: right;
+            width: 100px;
+            height: 100px;
+            margin-right: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="inpform" id="namesin">
+        <form method="post" action="nameform.php">
+            <h2>User Information</h2>
+
+            <!-- create four text boxes for user input -->
+            <div><label>제  목 : </label>
+                <input type="text" name="yname"></div>
+            <div><label>작  가 : </label>
+                <input type="text" name="ysid"></div>
+            <div><label>옮긴이 :</label>
+                <input type="text" name="yemail"></div>
+            <div><label>출판사 :</label>
+                <input type="text" name="ypic"></div>
+    </div>
+
+
+    <!-- create a submit button -->
+    <p><input type="submit" name="submit" value="Register"></p>
+    </form>
+    </div>
+    <br>
+    <br>
+
+</body>
+
+</html>
