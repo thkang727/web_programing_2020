@@ -1,0 +1,99 @@
+
+<!-- Webprogramming JS + html + css
+    201724404 강태환
+    2020.10.26.             -->
+
+<html>
+
+<head>
+    <style>
+        div.name {
+            width: 300px;
+            height: 200px;
+            padding: 10px;
+            border: 1px solid black;
+            display: none;
+        }
+        
+        div.inpform {
+            width: 300px;
+            height: 200px;
+            padding: 10px;
+            border: 0px solid black;
+        }
+        
+        div.inimg {
+            width: 50px;
+            height: 50px;
+            float: right;
+            margin-right: 10px;
+        }
+        
+        img {
+            float: right;
+            width: 100px;
+            height: 100px;
+            margin-right: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="inpform" id="namesin">
+        <form name="namecardInfo">
+            <br>
+            <p style> 입력 </p>
+
+            <p> 이름 : <input type="text" id="myName" maxlength="30" /></p>
+            <p> 학번 :
+                <input type="text" id="myScid" maxlength="30" /></p>
+            <p> 이메일 :
+                <input type="text" id="myEmail" maxlength="30" /></p>
+            <p> 사진 :
+                <input type="text" id="myPic" maxlength="255" /></p>
+            <br>
+
+        </form>
+        <input type="submit" value="신분증생성" onclick="java_in()" /></p>
+    </div>
+    <br>
+    <br>
+    <div class="name" id="namesout">
+        <h2 style="text-align: center"> 신분증</h2>
+        <p><img id="my_img" src="" alt="사진"></p>
+        <p id="my_name">
+
+
+        </p>
+        <p id="my_CScid"></p>
+
+        <p id="my_CEmail"></p>
+
+
+    </div>
+    <script>
+        function java_in() {
+            var myCname = document.getElementById("myName").value;
+            var myCScid = document.getElementById("myScid").value;
+            var myCEmail = document.getElementById("myEmail").value;
+
+            var myCpic = document.getElementById('myPic').value;
+
+
+
+            document.getElementById("my_name").innerHTML = "이름 : " + myCname;
+            document.getElementById("my_CScid").innerHTML = "학번 : " + myCScid;
+            document.getElementById("my_CEmail").innerHTML = "이메일 : " + myCEmail;
+            document.getElementById('my_img').src = myCpic;
+
+            document.getElementById("namesin").style.display = 'none';
+            document.getElementById("namesout").style.display = 'block';
+
+
+
+        }
+    </script>
+</body>
+
+</html>
